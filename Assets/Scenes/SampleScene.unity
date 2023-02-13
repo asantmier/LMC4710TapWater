@@ -3153,7 +3153,6 @@ GameObject:
   - component: {fileID: 503006032}
   - component: {fileID: 503006031}
   - component: {fileID: 503006030}
-  - component: {fileID: 503006029}
   m_Layer: 5
   m_Name: Another Button
   m_TagString: Untagged
@@ -3185,23 +3184,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -111.00001}
   m_SizeDelta: {x: 0, y: 70.9151}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &503006029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503006027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c702770926f51047a6d8b2c5d7ac1f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: assists
-  level: 0
-  cost: 0
-  levelText: {fileID: 749420347}
-  costText: {fileID: 336133476}
 --- !u!114 &503006030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3246,7 +3228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 503006029}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
         m_MethodName: Purchase
         m_Mode: 1
@@ -7635,7 +7617,6 @@ GameObject:
   - component: {fileID: 1965023453}
   - component: {fileID: 1965023452}
   - component: {fileID: 1965023451}
-  - component: {fileID: 1965023450}
   m_Layer: 5
   m_Name: Stage
   m_TagString: Untagged
@@ -7666,23 +7647,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -35.45755}
   m_SizeDelta: {x: 0, y: 70.9151}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1965023450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965023448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c702770926f51047a6d8b2c5d7ac1f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: assists
-  level: 0
-  cost: 0
-  levelText: {fileID: 0}
-  costText: {fileID: 996995694}
 --- !u!114 &1965023451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7727,7 +7691,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1965023450}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
         m_MethodName: Purchase
         m_Mode: 1
