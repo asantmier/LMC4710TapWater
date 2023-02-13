@@ -51,7 +51,11 @@ public class Upgrade : MonoBehaviour
 
     public void Purchase()
     {
-        gameManager.BuyUpgrade(type);
-        gameManager.GetUpgradeInfo(type, ref level, ref cost);
+        if (gameManager.bank.quench >= cost)
+        {
+            gameManager.BuyUpgrade(type);
+
+            gameManager.GetUpgradeInfo(type, ref level, ref cost);
+        }
     }
 }
