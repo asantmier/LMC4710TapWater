@@ -9,6 +9,11 @@ public class Manager : MonoBehaviour
     public float water;
     public float quench;
 
+    private void start()
+    {
+        bank = FindObjectOfType<Bank>();
+    }
+
     [Header("Assists")]
     // How many assistants are owned
     public int up_AssistsLevel = 0;
@@ -198,5 +203,26 @@ public class Manager : MonoBehaviour
         // Update bank counter
         bank.water = Mathf.FloorToInt(water);
         bank.quench = Mathf.FloorToInt(quench);
+    }
+
+    public void Fill() {
+        updateWater(10);
+    }
+
+    public void Quench() {
+        if (water >= 100) {
+            updateQuench(10);
+            updateWater(-100);
+        }
+    }
+
+    public void updateWater(int increment)
+    {
+        water += increment;
+    }
+
+    public void updateQuench(int increment)
+    {
+        quench += increment;
     }
 }
