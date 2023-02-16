@@ -8,6 +8,8 @@ public class Manager : MonoBehaviour
 
     public float water;
     public float quench;
+    public int clickPower = 1;
+    public int quenchRatio = 10;
 
     private void start()
     {
@@ -206,13 +208,13 @@ public class Manager : MonoBehaviour
     }
 
     public void Fill() {
-        updateWater(10);
+        updateWater(clickPower);
     }
 
     public void Quench() {
-        if (water >= 100) {
-            updateQuench(10);
-            updateWater(-100);
+        if (water >= quenchRatio) {
+            updateQuench(1);
+            updateWater(-(quenchRatio));
         }
     }
 
