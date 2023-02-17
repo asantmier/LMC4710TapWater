@@ -11,11 +11,6 @@ public class Manager : MonoBehaviour
     public int clickPower = 1;
     public int quenchRatio = 10;
 
-    private void start()
-    {
-        bank = FindObjectOfType<Bank>();
-    }
-
     [Header("Assists")]
     // How many assistants are owned
     public int up_AssistsLevel = 0;
@@ -68,6 +63,19 @@ public class Manager : MonoBehaviour
     public float up_QuantumsBase = 100000;
     public float up_QuantumsMult = 1.5f;
     public float up_QuantumsBaseCPS = 5000f;
+
+    private void Start()
+    {
+        GameObject info = GameObject.FindGameObjectWithTag("Bank");
+        if (info != null)
+        {
+            bank = info.GetComponent<Bank>();
+        }
+        else
+        {
+            Debug.LogError("Couldn't find an object tagged with Bank!");
+        }
+    }
 
     // Update is called once per frame
     void Update()
